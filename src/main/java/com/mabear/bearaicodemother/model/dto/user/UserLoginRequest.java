@@ -1,4 +1,4 @@
-package com.mabear.bearaicodemother.model.dto;
+package com.mabear.bearaicodemother.model.dto.user;
 
 import lombok.Data;
 
