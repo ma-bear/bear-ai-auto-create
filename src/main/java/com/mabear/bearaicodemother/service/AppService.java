@@ -1,7 +1,12 @@
 package com.mabear.bearaicodemother.service;
 
+import com.mabear.bearaicodemother.model.dto.app.AppQueryRequest;
 import com.mabear.bearaicodemother.model.entity.App;
+import com.mabear.bearaicodemother.model.vo.AppVO;
+import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.core.service.IService;
+
+import java.util.List;
 
 /**
  * 应用 服务层。
@@ -10,4 +15,9 @@ import com.mybatisflex.core.service.IService;
  */
 public interface AppService extends IService<App> {
 
+    AppVO getAppVO(App app);
+
+    List<AppVO> getAppVOList(List<App> appList);
+
+    QueryWrapper getQueryWrapper(AppQueryRequest appQueryRequest);
 }
