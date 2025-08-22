@@ -24,4 +24,6 @@ public interface AppService extends IService<App> {
     List<AppVO> getAppVOList(List<App> appList);
 
     QueryWrapper getQueryWrapper(AppQueryRequest appQueryRequest);
+
+    String deployApp(Long appId, User loginUser);
 }
