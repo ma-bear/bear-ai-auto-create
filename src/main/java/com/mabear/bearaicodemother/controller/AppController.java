@@ -135,7 +135,7 @@ public class AppController {
     /**
      * 根据 id 获取应用详情
      *
-     * @param id      应用 id
+     * @param id 应用 id
      * @return 应用详情
      */
     @GetMapping("/get/vo")
@@ -338,5 +338,4 @@ public class AppController {
         String deployUrl = appService.deployApp(appId, loginUser);
         return ResultUtils.success(deployUrl);
     }
-
 }
