@@ -1,4 +1,4 @@
-package com.mabear.bearaicodemother.tools;
+package com.mabear.bearaicodemother.ai.tools;
 
 import com.mabear.bearaicodemother.constant.AppConstant;
 import dev.langchain4j.agent.tool.P;

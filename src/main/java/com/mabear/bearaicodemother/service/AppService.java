@@ -26,4 +26,6 @@ public interface AppService extends IService<App> {
     QueryWrapper getQueryWrapper(AppQueryRequest appQueryRequest);
 
     String deployApp(Long appId, User loginUser);
+
+    void generateAppScreenshotAsync(Long appId, String appUrl);
 }
