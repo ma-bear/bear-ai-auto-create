@@ -82,6 +82,11 @@ const originItems = [
     label: '应用管理',
     title: '应用管理',
   },
+  {
+    key: 'others',
+    label: h('a', { href: 'https://github.com/ma-bear/bear-ai-code-mother', target: '_blank' }, 'GitHub'),
+    title: 'GitHub',
+  },
 ]
 
 // 过滤菜单项
