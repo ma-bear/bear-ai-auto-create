@@ -2,12 +2,12 @@ package com.mabear.bearaicodemother.ai;
 
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
+import com.mabear.bearaicodemother.service.impl.ChatHistoryService;
 import com.mabear.bearaicodemother.ai.guardrail.PromptSafetyInputGuardrail;
+import com.mabear.bearaicodemother.ai.tools.ToolManager;
 import com.mabear.bearaicodemother.exception.BusinessException;
 import com.mabear.bearaicodemother.exception.ErrorCode;
-import com.mabear.bearaicodemother.manager.ToolManager;
 import com.mabear.bearaicodemother.model.enums.CodeGenTypeEnum;
-import com.mabear.bearaicodemother.service.ChatHistoryService;
 import com.mabear.bearaicodemother.utils.SpringContextUtil;
 import dev.langchain4j.community.store.memory.chat.redis.RedisChatMemoryStore;
 import dev.langchain4j.data.message.ToolExecutionResultMessage;

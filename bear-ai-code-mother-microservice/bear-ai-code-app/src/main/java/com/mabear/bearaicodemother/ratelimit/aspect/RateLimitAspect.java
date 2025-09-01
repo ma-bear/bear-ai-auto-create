@@ -1,10 +1,10 @@
 package com.mabear.bearaicodemother.ratelimit.aspect;
 
+import com.mabear.bearaicodemother.ratelimit.annotation.RateLimit;
 import com.mabear.bearaicodemother.exception.BusinessException;
 import com.mabear.bearaicodemother.exception.ErrorCode;
+import com.mabear.bearaicodemother.innerservice.InnerUserService;
 import com.mabear.bearaicodemother.model.entity.User;
-import com.mabear.bearaicodemother.ratelimit.annotation.RateLimit;
-import com.mabear.bearaicodemother.service.UserService;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
@@ -27,10 +27,9 @@ import java.time.Duration;
 @Component
 @Slf4j
 public class RateLimitAspect {
+
     @Resource
     private RedissonClient redissonClient;
-    @Resource
-    private UserService userService;
 
     @Before("@annotation(rateLimit)")
     public void doBefore(JoinPoint point, RateLimit rateLimit) {
@@ -68,7 +67,7 @@ public class RateLimitAspect {
                     ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
                     if (attributes != null) {
                         HttpServletRequest request = attributes.getRequest();
-                        User loginUser = userService.getLoginUser(request);
+                        User loginUser = InnerUserService.getLoginUser(request);
                         keyBuilder.append("user:").append(loginUser.getId());
                     } else {
                         // 无法获取请求上下文，使用IP限流

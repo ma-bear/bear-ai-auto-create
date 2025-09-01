@@ -1,24 +1,24 @@
 package com.mabear.bearaicodemother.controller;
 
+import com.mabear.bearaicodemother.service.impl.ChatHistoryService;
 import com.mabear.bearaicodemother.annotation.AuthCheck;
 import com.mabear.bearaicodemother.common.BaseResponse;
 import com.mabear.bearaicodemother.common.ResultUtils;
 import com.mabear.bearaicodemother.constant.UserConstant;
 import com.mabear.bearaicodemother.exception.ErrorCode;
 import com.mabear.bearaicodemother.exception.ThrowUtils;
+import com.mabear.bearaicodemother.innerservice.InnerUserService;
 import com.mabear.bearaicodemother.model.dto.chatHistory.ChatHistoryQueryRequest;
 import com.mabear.bearaicodemother.model.entity.ChatHistory;
 import com.mabear.bearaicodemother.model.entity.User;
-import com.mabear.bearaicodemother.service.ChatHistoryService;
-import com.mabear.bearaicodemother.service.UserService;
 import com.mybatisflex.core.paginate.Page;
 import com.mybatisflex.core.query.QueryWrapper;
+import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
-import java.util.List;
+
 
 /**
  * 对话历史 控制层。
@@ -29,11 +29,8 @@ import java.util.List;
 @RequestMapping("/chatHistory")
 public class ChatHistoryController {
 
-    @Autowired
+    @Resource
     private ChatHistoryService chatHistoryService;
-
-    @Autowired
-    private UserService userService;
 
     /**
      * 分页查询某个应用的对话历史（游标查询）
@@ -49,7 +46,7 @@ public class ChatHistoryController {
                                                               @RequestParam(defaultValue = "10") int pageSize,
                                                               @RequestParam(required = false) LocalDateTime lastCreateTime,
                                                               HttpServletRequest request) {
-        User loginUser = userService.getLoginUser(request);
+        User loginUser = InnerUserService.getLoginUser(request);
         Page<ChatHistory> result = chatHistoryService.listAppChatHistoryByPage(appId, pageSize, lastCreateTime, loginUser);
         return ResultUtils.success(result);
     }

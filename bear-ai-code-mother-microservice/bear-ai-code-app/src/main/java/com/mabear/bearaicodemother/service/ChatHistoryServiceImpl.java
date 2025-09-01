@@ -1,18 +1,18 @@
-package com.mabear.bearaicodemother.service.impl;
+package com.mabear.bearaicodemother.service;
 
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
+import com.mabear.bearaicodemother.mapper.ChatHistoryMapper;
+import com.mabear.bearaicodemother.service.impl.AppService;
+import com.mabear.bearaicodemother.service.impl.ChatHistoryService;
 import com.mabear.bearaicodemother.constant.UserConstant;
 import com.mabear.bearaicodemother.exception.ErrorCode;
 import com.mabear.bearaicodemother.exception.ThrowUtils;
-import com.mabear.bearaicodemother.mapper.ChatHistoryMapper;
 import com.mabear.bearaicodemother.model.dto.chatHistory.ChatHistoryQueryRequest;
 import com.mabear.bearaicodemother.model.entity.App;
 import com.mabear.bearaicodemother.model.entity.ChatHistory;
 import com.mabear.bearaicodemother.model.entity.User;
 import com.mabear.bearaicodemother.model.enums.ChatHistoryMessageTypeEnum;
-import com.mabear.bearaicodemother.service.AppService;
-import com.mabear.bearaicodemother.service.ChatHistoryService;
 import com.mybatisflex.core.paginate.Page;
 import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.spring.service.impl.ServiceImpl;

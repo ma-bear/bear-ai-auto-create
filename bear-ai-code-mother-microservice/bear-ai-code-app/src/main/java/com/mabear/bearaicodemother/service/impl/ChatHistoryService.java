@@ -1,4 +1,4 @@
-package com.mabear.bearaicodemother.service;
+package com.mabear.bearaicodemother.service.impl;
 
 import com.mabear.bearaicodemother.model.dto.chatHistory.ChatHistoryQueryRequest;
 import com.mabear.bearaicodemother.model.entity.ChatHistory;

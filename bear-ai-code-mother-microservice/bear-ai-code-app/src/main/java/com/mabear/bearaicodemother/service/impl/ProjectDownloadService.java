@@ -1,4 +1,4 @@
-package com.mabear.bearaicodemother.service;
+package com.mabear.bearaicodemother.service.impl;
 
 import jakarta.servlet.http.HttpServletResponse;
 

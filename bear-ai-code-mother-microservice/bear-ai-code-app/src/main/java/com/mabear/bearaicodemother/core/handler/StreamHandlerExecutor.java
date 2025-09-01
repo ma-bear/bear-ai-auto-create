@@ -1,8 +1,8 @@
 package com.mabear.bearaicodemother.core.handler;
 
+import com.mabear.bearaicodemother.service.impl.ChatHistoryService;
 import com.mabear.bearaicodemother.model.entity.User;
 import com.mabear.bearaicodemother.model.enums.CodeGenTypeEnum;
-import com.mabear.bearaicodemother.service.ChatHistoryService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

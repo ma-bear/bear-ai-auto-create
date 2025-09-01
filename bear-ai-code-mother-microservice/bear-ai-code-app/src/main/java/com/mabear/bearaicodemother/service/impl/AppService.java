@@ -1,4 +1,4 @@
-package com.mabear.bearaicodemother.service;
+package com.mabear.bearaicodemother.service.impl;
 
 import com.mabear.bearaicodemother.model.dto.app.AppAddRequest;
 import com.mabear.bearaicodemother.model.dto.app.AppQueryRequest;
