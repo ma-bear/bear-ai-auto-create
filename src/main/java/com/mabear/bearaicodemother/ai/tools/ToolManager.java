@@ -1,4 +1,4 @@
-package com.mabear.bearaicodemother.manager;
+package com.mabear.bearaicodemother.ai.tools;
 
 import com.mabear.bearaicodemother.ai.tools.BaseTool;
 import jakarta.annotation.PostConstruct;
