@@ -1,4 +1,4 @@
-package com.mabear.bearaicodemother.config;
+package com.mabear.bearaicodemother.ai.config;
 
 import cn.hutool.core.util.StrUtil;
 import dev.langchain4j.community.store.memory.chat.redis.RedisChatMemoryStore;
