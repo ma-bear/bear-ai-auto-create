@@ -1,4 +1,4 @@
-package com.mabear.bearaicodemother.controller;
+package com.mabear.bearaicodeuser.controller;
 
 import cn.hutool.core.bean.BeanUtil;
 import com.mabear.bearaicodemother.annotation.AuthCheck;
@@ -17,7 +17,7 @@ import com.mabear.bearaicodemother.model.dto.user.UserUpdateRequest;
 import com.mabear.bearaicodemother.model.entity.User;
 import com.mabear.bearaicodemother.model.vo.LoginUserVO;
 import com.mabear.bearaicodemother.model.vo.UserVO;
-import com.mabear.bearaicodemother.service.UserService;
+import com.mabear.bearaicodeuser.service.UserService;
 import com.mybatisflex.core.paginate.Page;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,17 +1,17 @@
-package com.mabear.bearaicodemother.service.impl;
+package com.mabear.bearaicodeuser.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
 import com.mabear.bearaicodemother.exception.BusinessException;
 import com.mabear.bearaicodemother.exception.ErrorCode;
-import com.mabear.bearaicodemother.mapper.UserMapper;
+import com.mabear.bearaicodeuser.mapper.UserMapper;
 import com.mabear.bearaicodemother.model.dto.user.UserQueryRequest;
 import com.mabear.bearaicodemother.model.entity.User;
 import com.mabear.bearaicodemother.model.enums.UserRoleEnum;
 import com.mabear.bearaicodemother.model.vo.LoginUserVO;
 import com.mabear.bearaicodemother.model.vo.UserVO;
-import com.mabear.bearaicodemother.service.UserService;
+import com.mabear.bearaicodeuser.service.UserService;
 import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.spring.service.impl.ServiceImpl;
 import jakarta.servlet.http.HttpServletRequest;

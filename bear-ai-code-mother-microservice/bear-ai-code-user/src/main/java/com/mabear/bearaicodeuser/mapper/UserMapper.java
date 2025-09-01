@@ -1,4 +1,4 @@
-package com.mabear.bearaicodemother.mapper;
+package com.mabear.bearaicodeuser.mapper;
 
 import com.mabear.bearaicodemother.model.entity.User;
 import com.mybatisflex.core.BaseMapper;

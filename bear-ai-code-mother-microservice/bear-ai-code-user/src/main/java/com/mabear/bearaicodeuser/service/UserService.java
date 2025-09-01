@@ -1,4 +1,4 @@
-package com.mabear.bearaicodemother.service;
+package com.mabear.bearaicodeuser.service;
 
 import com.mabear.bearaicodemother.model.dto.user.UserQueryRequest;
 import com.mabear.bearaicodemother.model.entity.User;
