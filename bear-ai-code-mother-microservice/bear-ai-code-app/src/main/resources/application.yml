@@ -1,6 +1,8 @@
 spring:
   application:
     name: bear-ai-code-app
+  profiles:
+    active: local
   # session
   session:
     store-type: redis
@@ -20,8 +22,6 @@ spring:
       database: 0
       password:
       ttl: 3600
-  profiles:
-    active: local
 server:
   port: 8125
   servlet:

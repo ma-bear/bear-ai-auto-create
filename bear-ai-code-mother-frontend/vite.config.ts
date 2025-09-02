@@ -15,7 +15,8 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:8080',
+        // target: 'http://localhost:8080', // Higress 网关入口
+        target: 'http://localhost:8123',
         changeOrigin: true,
         secure: false,
       },
