@@ -34,8 +34,13 @@ public class WebScreenshotUtils {
     static {
         final int DEFAULT_WIDTH = 1600;
         final int DEFAULT_HEIGHT = 900;
-
         webDriver = initChromeDriver(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+
+        System.setProperty("wdm.timeout", "500");
+        System.setProperty("wdm.retryCount", "3");
+        // 设置国内镜像源
+        System.setProperty("wdm.chromeDownloadUrl", "https://npmmirror.com/mirrors/chromedriver/");
+
     }
 
     @PreDestroy
@@ -49,7 +54,7 @@ public class WebScreenshotUtils {
     private static WebDriver initChromeDriver(int width, int height) {
         try {
             // 自动管理 ChromeDriver
-            WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().useMirror().setup();
             // 配置 Chrome 选项
             ChromeOptions options = new ChromeOptions();
             // 无头模式
